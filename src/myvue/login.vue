@@ -1,7 +1,9 @@
 <template>
   <el-form ref="form" :model="form" label-width="80px">
     <el-form-item label="用户名">
-      <el-input v-model="form.name"></el-input>
+      <el-input v-model="form.name">
+        <i slot="prefix" class="el-input__icon el-icon-date"></i>
+      </el-input>
     </el-form-item>
     <el-form-item label="密码">
       <el-input v-model="form.name"></el-input>
@@ -38,10 +40,11 @@ export default {
 <style lang="css">
 .el-form {
   width: 600px;
-  background-color: gray;
+  border: 1px red solid;
   margin: 100px auto;
   height: 500px;
   padding-top: 5px;
+  padding-right: 20px;
 }
 .el-form-item {
   margin-top: 80px;
