@@ -6,7 +6,9 @@
       </el-input>
     </el-form-item>
     <el-form-item label="密码">
-      <el-input v-model="form.name"></el-input>
+      <el-input v-model="form.name">
+        <i slot="prefix" class="iconfont icon-laoshi1"></i>
+      </el-input>
     </el-form-item>
     <el-form-item>
       <el-button type="primary" @click="onSubmit">登录</el-button>
