@@ -5,11 +5,6 @@ import Home from '../views/Home.vue'
 Vue.use(VueRouter)
 
 const routes = [{
-        path: '/',
-        name: 'Home',
-        component: Home
-    },
-    {
         path: '/about',
         name: 'About',
         // route level code-splitting
@@ -26,6 +21,9 @@ const routes = [{
         // which is lazy-loaded when the route is visited.
         component: () =>
             import ( /* webpackChunkName: "about" */ '../myvue/login.vue')
+    }, {
+        path: '/',
+        redirect: '/login'
     }
 ]
 
